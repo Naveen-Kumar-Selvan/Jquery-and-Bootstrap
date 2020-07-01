@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>hide demo</title>
+  <style>
+  span {
+    background: #def3ca;
+    padding: 3px;
+    float: left;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+	<div class="container" style= "margin-top:50px;">
+		<img src="graduation.jpg" class="rounded float-left" width="128px" height="128px">
+		<h1>End Semester Result!!!</h1>
+	</div> 
+ 
+	<button id="hider">Hide</button>
+	<button id="shower">Show</button>
+	<div class="container" style="text-align: center;">
+	<span>
+		<table class="table table-bordered">
+			<thead>
+				<tr class="bg-primary">
+					<th scope="col">S.No</th>
+					<th scope="col">Subject</th>
+					<th scope="col">Grade</th>
+					<th scope="col">Result</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="table-success">
+				  <th scope="row">1</th>
+				  <td>Engineering Thermodynamics</td>
+				  <td>A</td>
+				  <td>Pass</td>
+				</tr>
+				<tr class="table-success">
+				  <th scope="row">2</th>
+				  <td>Fluid Mechanics</td>
+				  <td>O</td>
+				  <td>Pass</td>
+				</tr>
+				<tr class="table-danger">
+				  <th scope="row">3</th>
+				  <td scope="row">Machine Design</td>
+				  <td>E</td>
+				  <td>Fail</td>
+				</tr>
+				<tr class="table-success">
+				  <th scope="row">4</th>
+				  <td>Heat and Mass transfer</td>
+				  <td>B+</td>
+				  <td>Pass</td>
+				</tr>
+				<tr class="table-success">
+				  <th scope="row">5</th>
+				  <td>Material Science</td>
+				  <td>A+</td>
+				  <td>Pass</td>
+				</tr>
+				 </tbody>
+	    </table>
+	</span>
+	</div>
+ 
+	<script>
+	$( "#hider" ).click(function() {
+	  $( "span:last-child" ).hide( "fast", function() {
+		$( this ).prev().hide( "fast", arguments.callee );
+	  });
+	});
+	$( "#shower" ).click(function() {
+	  $( "span" ).show( 2000 );
+	});
+	</script>
+ 
+</body>
+</html>
