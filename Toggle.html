@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<title> Toggle </title>
+	<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+	</script> 
+	<script> 
+		$(document).ready(function() { 
+			$("button").click(function() { 
+				$(".container").toggle(); 
+			}); 
+		}); 
+	</script> 
+	<style> 
+		.container { 
+			color: black;
+			margin-top: 50px;
+			text-align: center; 
+			background-color: pink;
+		} 
+	</style> 
+</head> 
+<body> 
+	<h1>End Semester Result!!!</h1>
+		<div class="container">
+			<span>
+			<table class="table table-bordered">
+			<thead>
+				<tr class="bg-primary">
+					<th scope="col">S.No</th>
+					<th scope="col">Subject</th>
+					<th scope="col">Grade</th>
+					<th scope="col">Result</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="table-success">
+				  <th scope="row">1</th>
+				  <td>Engineering Thermodynamics</td>
+				  <td>A</td>
+				  <td>Pass</td>
+				</tr>
+				<tr class="table-success">
+				  <th scope="row">2</th>
+				  <td>Fluid Mechanics</td>
+				  <td>O</td>
+				  <td>Pass</td>
+				</tr>
+				<tr class="table-danger">
+				  <th scope="row">3</th>
+				  <td scope="row">Machine Design</td>
+				  <td>E</td>
+				  <td>Fail</td>
+				</tr>
+				<tr class="table-success">
+				  <th scope="row">4</th>
+				  <td>Heat and Mass transfer</td>
+				  <td>B+</td>
+				  <td>Pass</td>
+				</tr>
+				<tr class="table-success">
+				  <th scope="row">5</th>
+				  <td>Material Science</td>
+				  <td>A+</td>
+				  <td>Pass</td>
+				</tr>
+			</tbody>
+			</table>
+			</span>
+		</div>
+		<button>Toggle it</button> 
+</body> 
+</html> 

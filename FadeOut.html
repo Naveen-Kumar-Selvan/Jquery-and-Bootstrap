@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<title> fadeOut </title>
+	<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+	</script> 
+	<script> 
+		$(document).ready(function() { 
+			$("button").click(function() { 
+				$("#img").fadeOut(1000); 
+			}); 
+		}); 
+	</script> 
+	 <style> 
+		.container { 
+			color: black;
+			margin-top: 50px;
+			text-align: center; 
+			background-color: violet;
+		} 
+	</style>
+</head>
+<body>
+	<div class="container">
+		<button> CLICK HERE </button><br><br> 
+		<div id="img">
+			<img src="VK.jpg" style="width: 480px; height: 480px;">
+		</div>
+	</div>
+</body>
+</html>
